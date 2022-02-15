@@ -15,3 +15,16 @@ button.addEventListener("mouseenter", () => {
 button.addEventListener("mouseleave", () => {
   body.style = "background-color: yellow";
 });
+
+const form = document.querySelector("form");
+let firstName = document.querySelector("#firstName");
+let lastName = document.querySelector("#lastName");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (firstName.value == "") {
+    console.log("Please enter first name");
+  }
+  if (lastName.value == "") {
+    console.log("Please enter last name");
+  }
+});
