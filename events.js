@@ -22,9 +22,11 @@ let lastName = document.querySelector("#lastName");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (firstName.value == "") {
-    console.log("Please enter first name");
+    let firstNameErr = document.getElementById("firstNameErr");
+    firstNameErr.innerHTML = "Please enter first name";
   }
   if (lastName.value == "") {
-    console.log("Please enter last name");
+    let lastNameErr = document.getElementById("lastNameErr");
+    lastNameErr.innerHTML = "Please enter last name";
   }
 });
